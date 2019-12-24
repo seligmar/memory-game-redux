@@ -7,8 +7,6 @@ import Swal from 'sweetalert2'
 import withReactContent from 'sweetalert2-react-content'
 import { withRouter } from 'react-router-dom'
 
-import { Button } from 'semantic-ui-react'
-
 const SAVEGAMEURL = 'http://localhost:3000/save-game'
 
 const MySwal = withReactContent(Swal)
@@ -139,7 +137,7 @@ class App extends React.Component {
     return (
       <div className='App-header'>
         {this.state.showStartGameButton ? (
-          <Button
+          <button
             size='large'
             primary
             className='start-page-buttons'
@@ -147,12 +145,12 @@ class App extends React.Component {
           >
             {' '}
             Start Game{' '}
-          </Button>
+          </button>
         ) : (
           <h2>CONGRATS, THANKS FOR PLAYING :)</h2>
         )}
         <br />
-        <Button
+        <button
           size='large'
           primary
           className='start-page-buttons'
@@ -160,7 +158,7 @@ class App extends React.Component {
         >
           {'   '}
           Logout {'  '}
-        </Button>
+        </button>
         <br />
         <BoardGame
           endGame={this.endGame}
