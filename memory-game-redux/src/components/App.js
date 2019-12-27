@@ -12,27 +12,38 @@ class App extends React.Component {
     showStartGameButton: true
   }
 
+  createNewArray = () => {
+    // this is the function to call on click of 'start game'
+    const newArray = this.setNewArrayofPaintings()
+    // creates array of 8 random numbers from 0 to 96
+    const arrayOf16 = newArray.concat(...newArray)
+    // doubles array of 8 random numbers from 0 to 96
+    this.shuffle(arrayOf16)
+    // shuffles numbers of the array
+  }
+
   setNewArrayofPaintings = () => {
-    const index = [...Array(97).keys()] // this works
+    const index = [...Array(97).keys()]
+    // creates an array of whole numbers 0 to 96
     const newArray = []
     var i = 0
     while (i < 8) {
-      var rand = index[Math.floor(Math.random() * index.length)] // this works
+      // limits length of new array to 8 numbers
+      var rand = index[Math.floor(Math.random() * index.length)]
+      // pulls a randon number out of the index array
       var indexNew = index.indexOf(rand)
+      // sets the index of the randon number as a variable
       if (indexNew > -1) {
         index.splice(indexNew, 1)
+        // splices the randon number from the index array
         newArray.push(rand)
+        // pushes the randon number into a new array
       }
       i++
     }
     return newArray
-  }
-
-  createNewArray = () => {
-    // this is the function to call on click of 'start game'
-    const newArray = this.setNewArrayofPaintings()
-    const arrayOf16 = newArray.concat(...newArray)
-    this.shuffle(arrayOf16)
+    // returns array of 8 randon numbers from the 'index' array without ever
+    // repeating any numbers
   }
 
   shuffle = array => {
@@ -59,7 +70,6 @@ class App extends React.Component {
 
   startGame = () => {
     this.createNewArray()
-    this.setState({ showLeaderboard: true })
   }
 
   endGame = () => {
