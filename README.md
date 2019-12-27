@@ -6,17 +6,6 @@ This app is a memory game in which the player clicks on the back of two cards, r
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
-This project uses bcrypt with a username and one-way hashed encryption using bcrypt
-
-You may need to manually activate
-gem 'rack-cors'
-gem 'bcrypt', '~> 3.1.7'
-and then run bundle install again.
-
-rails s -p 3001 (or whichever port)
-
-To prevent the need for 'prop drilling' and other challenges related to state, this app uses Redux; for an example of a similar project using regulr React please see an alternative framework I created here: https://github.com/seligmar/Campaign-2020
-
 # Prerequisites
 
 What things you need to install the software and how to install them
