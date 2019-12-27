@@ -1,7 +1,7 @@
 import React from 'react'
-import './App.css'
-import './index.css'
-import paintings from './data/paintings'
+import '../css/App.css'
+import '../css/index.css'
+import paintings from '../data/paintings'
 import BoardGame from './BoardGame'
 import { withRouter } from 'react-router-dom'
 
