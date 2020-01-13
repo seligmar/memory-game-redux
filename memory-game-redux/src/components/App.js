@@ -47,6 +47,7 @@ class App extends React.Component {
   }
 
   shuffle = array => {
+    // shuffles the indicies of the array of 16 numbers from the 8 random numbers selected
     let counter = array.length
     while (counter > 0) {
       const index = Math.floor(Math.random() * counter)
@@ -66,23 +67,31 @@ class App extends React.Component {
 
   componentDidMount () {
     this.setState({ paintings })
+    // imports paintings from data file
   }
 
   startGame = () => {
     this.createNewArray()
+    // when the start game button is clicked, the indicies to be played are generated
   }
 
   endGame = () => {
     this.setState({ showStartGameButton: false })
-    //  this.props.history.push('/')
   }
 
   render () {
+    const buttonsCss = {
+      'border-radius': '4px',
+      'background-color': 'aqua'
+    }
     const paintingsToPass = this.paintingsToPass()
+    // this is called here to ensure that all the necessary state has been generated
+    // before the page renders- asyncronous!
     return (
       <div className='App-header'>
         {this.state.showStartGameButton ? (
           <button
+            style={buttonsCss}
             size='large'
             primary
             className='start-page-buttons'
@@ -92,7 +101,15 @@ class App extends React.Component {
             Start Game{' '}
           </button>
         ) : (
-          <h2>CONGRATS, THANKS FOR PLAYING :)</h2>
+          <button
+            size='large'
+            primary
+            className='start-page-buttons'
+            onClick={() => this.endGame()}
+          >
+            {' '}
+            End Game{' '}
+          </button>
         )}
         <br />
         <BoardGame

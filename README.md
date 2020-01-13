@@ -4,17 +4,13 @@ This app is a memory game in which the player clicks on the back of two cards, r
 
 # Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+After forking and cloning this project, please run npm install. This app runs on:
 
-runs on: localhost:3000/game
+localhost:3000/game
 
 # Prerequisites
 
 What things you need to install the software and how to install them
-
-To include the Google Map functionality, you will need to aquire a Google API key and create a file to gitnore. Informaiton about how to do so is available here:
-
-https://gist.github.com/derzorngottes/3b57edc1f996dddcab25
 
 # Give examples
 
@@ -53,4 +49,8 @@ https://www.npmjs.com/package/semantic-ui-css
 
 # Authors
 
+On the original version of this project Nicolas Charlet and I worked together; I could not have asked for a better co-coder! His projects are here: https://github.com/nickgc91
+
 # Acknowledgments
+
+Nicolas Charlet and all of my classmates and instructors at the Flatiron School London campus!
