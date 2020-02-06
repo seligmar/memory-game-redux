@@ -72,6 +72,7 @@ class App extends React.Component {
 
   startGame = () => {
     this.createNewArray()
+    this.setState({ showStartGameButton: false })
     // when the start game button is clicked, the indicies to be played are generated
   }
 
@@ -102,6 +103,7 @@ class App extends React.Component {
           </button>
         ) : (
           <button
+            style={buttonsCss}
             size='large'
             primary
             className='start-page-buttons'
